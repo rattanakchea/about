@@ -9,8 +9,8 @@ app.config(function ($routeProvider) {
     templateUrl: 'views/home.html',
     controller: 'HomeCtrl'
   })
-  .when('/about', {
-    templateUrl: 'views/about.html'
+  .when('/me', {
+    templateUrl: 'views/partials/_me.html'
   })
   .otherwise({
     redirectTo: '/'

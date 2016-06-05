@@ -8,10 +8,9 @@ app.controller('HomeCtrl', function ($scope, $http) {
     
     $scope.apiURL = base_url;
     
-    
     getItems();
     
-    function getItems(){
+    function getProjects(){
         $http.get(base_url + '/items').then(function(items){
         
         $scope.items = items.data;
@@ -21,20 +20,5 @@ app.controller('HomeCtrl', function ($scope, $http) {
     });
     }
     
-    
-    
-    $scope.postItem = function(item){
-        //valid item
-        console.log(item);
-        $http.post(base_url + '/items', item).then(function(msg){
-            console.log(msg.data);
-            
-             getItems();
-            
-            }, function(err){
-            console.log(err);
-        });
-        
-    }
 	
 });
