@@ -10,8 +10,14 @@ app.config(function ($routeProvider) {
     controller: 'HomeCtrl'
   })
   .when('/me', {
-    templateUrl: 'views/partials/_me.html'
+    templateUrl: 'views/partials/_me.html',
+     controller: 'HomeCtrl'
   })
+  .when('/project/:id', {
+    templateUrl: 'views/partials/_project-detail.html',
+     controller: 'HomeCtrl'
+  })
+
   .otherwise({
     redirectTo: '/'
   });

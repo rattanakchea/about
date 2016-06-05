@@ -4,7 +4,15 @@
     <h3 style="text-align:center; margin-bottom:1em;">Recent Projects</h3>
     <div class="container">
         <!-- portfolio item -->
-        <div class="col-sm-6 col-md-4 col-lg-4">
+
+        <div ng-repeat="project in featuredProjects">
+            <!-- {{project}} -->
+            <my-project project="project"></my-project>
+            
+        </div>
+
+        <!-- template -->
+        <!-- <div class="col-sm-6 col-md-4 col-lg-4">
             <div class="project-wrapper" style="background-image: url('https://placehold.it/350x150')">
                 <div class="project-title text-center">
                         <h4>Project Awesome</h4>
@@ -14,34 +22,7 @@
                     Read More
                 </div>
             </div>
-        </div>
-        <!-- end p item -->
-        <!-- portfolio item -->
-        <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="project-wrapper" style="background-image: url('https://placehold.it/350x150')">
-                <div class="project-title text-center">
-                        <h4>Project Awesome</h4>
-                </div>
-            </div>
-        </div>
-        <!-- end p item -->
-        <!-- portfolio item -->
-        <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="project-wrapper" style="background-image: url('https://placehold.it/350x150')">
-                <div class="project-title text-center">
-                        <h4>Project Awesome</h4>
-                </div>
-            </div>
-        </div>
-        <!-- end p item -->
-        <!-- portfolio item -->
-        <div class="col-sm-6 col-md-4 col-lg-4">
-            <div class="project-wrapper" style="background-image: url('https://placehold.it/350x150')">
-                <div class="project-title text-center">
-                        <h4>Project Awesome</h4>
-                </div>
-            </div>
-        </div>
-        <!-- end p item -->
+        </div> -->
+        
     </div>
 </div>

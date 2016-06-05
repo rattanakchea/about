@@ -2,23 +2,27 @@
 
 var app = app || {};
 
-app.controller('HomeCtrl', function ($scope, $http) {
+app.controller('HomeCtrl', function($scope, ProjectSvc) {
 
-    var base_url  = 'http://localhost:8000/api';
+    var preject_url = 'https://dl.dropboxusercontent.com/u/2122820/hosted_json/project.json';
     
-    $scope.apiURL = base_url;
-    
-    getItems();
-    
-    function getProjects(){
-        $http.get(base_url + '/items').then(function(items){
+    $scope.projects = [];
+
+    $scope.featuredProjects = [];
+
+    ProjectSvc.getProjects().then(function(data){
+        //console.log(data.data.projects);  //19 projects
+
+        $scope.projects = data.data.projects;
         
-        $scope.items = items.data;
-        console.log(items.data);
+        $scope.featuredProjects = data.data.projects.slice(0, 6);
+
+        console.log($scope.featuredProjects);
+
+
     }, function(err){
         console.log(err);
-    });
-    }
-    
-	
+    })
+
+
 });

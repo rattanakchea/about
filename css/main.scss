@@ -170,18 +170,18 @@ hr {
 	max-height: 230px;
 	background-size: cover;
 	background-position: center;
-
 	background: #fff;
 	border: 1px solid $highlight;
 	border-radius: .3em;
 	padding: 1em;
 	margin-bottom: 1em;
 	position: relative;
-	transition: all .3s ease-in-out;
+	transition: all .5s ease-in-out;
 
 	&:hover{
 		cursor: pointer;
 		box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.1);
+		background: rgba(0, 0, 0, 0.6) !important;
 	}
 
 	a {
@@ -211,7 +211,7 @@ hr {
 }
 
 .project-title {
-	background: rgba(0, 0, 0, 0.5);
+	background: rgba(0, 0, 0, 0.8);
     position: absolute;
     top: 0;
     left: 0;
