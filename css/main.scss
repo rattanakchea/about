@@ -1,0 +1,122 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body #content{
+  min-height: 700px;
+}
+.footer {
+  width: 100%;
+  background-color: #CECECE;
+}
+
+/*fixed-navbar*/
+body > #content {
+  padding: 60px 0px 0;
+}
+.content .text-muted {
+  margin: 20px 0;
+}
+
+.footer > #content {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+/*----------- Color --------------- */
+$main: #727878;  /*grey*/
+$highlight: #fcac45; /*yellow*/
+
+$lightgrey: #f3efe0;
+
+$highlight_1: #fd7576;
+$highlight_2: #fec85d;
+$highlight_3: #4db8de;
+$highlight_4: #a378fc;
+$border:      #e6e7e9;
+
+
+
+/*----------- Font --------------- */
+$font-stack: "Helvetica Neue", "Open Sans", Helvetica, Arial, sans-serif;
+
+$xxlarge: 4em;
+$xlarge: 3em;
+$large: 1.3em;
+$regular: 1em;
+
+
+body {
+  font: 1.6em $font-stack;
+  color: $main;
+}
+
+.border {
+  height: 6px;
+  border: 0;
+  background-color: red;
+  background-image:
+    linear-gradient(
+      to right, 
+      $highlight_1,
+      $highlight_1 25%,
+      $highlight_2 25%,
+      $highlight_2 50%,
+      $highlight_3 50%,
+      $highlight_3 75%,
+      $highlight_4 75%,
+      $highlight_4 100%,
+      $highlight_4 100%
+    );
+
+  -webkit-background-size: 50% 100%;
+  -moz-background-size: 50% 100%;
+  background-size: 50% 100%;
+}
+
+.navbar-fixed-top {
+	top:6px;  /*leave space for border*/
+}
+
+.header {
+	padding-top: 1em;
+}
+
+
+#logo {
+	img {
+		width: 60px;
+		float: left;
+	}
+	a {
+		margin: 0 0 0 .5em;
+		color: $highlight;
+		font-weight: 600;
+		span {
+			font-weight: 200;
+		}
+	}
+
+}
+
+.navbar-nav {
+/*	float: right;*/
+	font-size: $large;
+}
+
+img#bubble {
+	border: .3em solid $main;
+}
+
+.section {
+	margin: 40px 0 20px;
+	padding-bottom: 10px;
+}
+
+/*recent project section*/
+.recentproject {
+	background: $lightgrey;
+}

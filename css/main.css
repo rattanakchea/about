@@ -4,23 +4,88 @@ html {
   position: relative;
   min-height: 100%;
 }
-body #content{
+
+body #content {
   min-height: 700px;
 }
+
 .footer {
   width: 100%;
   background-color: #CECECE;
 }
 
 /*fixed-navbar*/
-body > .container {
-  padding: 60px 15px 0;
+body > #content {
+  padding: 60px 0px 0;
 }
-.container .text-muted {
+
+.content .text-muted {
   margin: 20px 0;
 }
 
-.footer > .container {
+.footer > #content {
   padding-right: 15px;
   padding-left: 15px;
+}
+
+/*----------- Color --------------- */
+/*grey*/
+/*yellow*/
+/*----------- Font --------------- */
+body {
+  font: 1.6em "Helvetica Neue", "Open Sans", Helvetica, Arial, sans-serif;
+  color: #727878;
+}
+
+.border {
+  height: 6px;
+  border: 0;
+  background-color: red;
+  background-image: linear-gradient(to right, #fd7576, #fd7576 25%, #fec85d 25%, #fec85d 50%, #4db8de 50%, #4db8de 75%, #a378fc 75%, #a378fc 100%, #a378fc 100%);
+  -webkit-background-size: 50% 100%;
+  -moz-background-size: 50% 100%;
+  background-size: 50% 100%;
+}
+
+.navbar-fixed-top {
+  top: 6px;
+  /*leave space for border*/
+}
+
+.header {
+  padding-top: 1em;
+}
+
+#logo img {
+  width: 60px;
+  float: left;
+}
+
+#logo a {
+  margin: 0 0 0 .5em;
+  color: #fcac45;
+  font-weight: 600;
+}
+
+#logo a span {
+  font-weight: 200;
+}
+
+.navbar-nav {
+  /*	float: right;*/
+  font-size: 1.3em;
+}
+
+img#bubble {
+  border: 0.3em solid #727878;
+}
+
+.section {
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+}
+
+/*recent project section*/
+.recentproject {
+  background: #f3efe0;
 }

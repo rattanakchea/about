@@ -1,10 +1,19 @@
-<div class="page-header">
-<h1>My name is Rattanak Chea</h1>
-</div>
-<p class="lead">Features include</p>
+<div ng-include="'views/partials/_about.html'"></div>
+<!-- Recent Project Section -->
+<div class="row recentproject section">
+    <h3 style="text-align:center">Recent Projects</h3>
+    <div class="container">
 
-<ul>
-    <li ng-repeat="item in items">
-        {{item.title}}
-    </li>
-</ul>
+    	<!-- portfolio item -->
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <div class="front">
+                <a href="http://rattanakchea.github.io/monopolychecker/"> <img src="https://dl.dropboxusercontent.com/u/2122820/hosted_img/monopolychecker.jpg" width="100%"></a>
+            </div>
+
+            <p>Monopoly Checker</p>
+            <p><a href="http://rattanakchea.github.io/monopolychecker/">Demo</a></p>
+        </div>
+        <!-- end portfolio -->
+
+    </div>
+</div>

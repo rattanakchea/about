@@ -5,8 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="some description about the app">
     <meta name="author" content="Rattanak Chea">
-    <title>My App</title>
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <title>Rattanak Chea</title>
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
+    <link href="css/libs/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet">
 
@@ -18,12 +20,13 @@
         <![endif]-->
     </head>
     <body ng-app="appName">
+        <div class="border"></div>
 
         <!-- Navigation -->
         <div ng-include="'views/partials/_navbar.html'"></div>
 
         <!-- Page Content -->
-        <div class="container" id="content">
+        <div id="content">
             <div class="ng-view="></div>        
         </div>
         <!-- end container -->
