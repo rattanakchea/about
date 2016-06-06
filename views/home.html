@@ -1,14 +1,13 @@
 <div ng-include="'views/partials/_me.html'"></div>
 <!-- Recent Project Section -->
-<div class="row recentproject section">
-    <h3 style="text-align:center; margin-bottom:1em;">Recent Projects</h3>
+<div class="row recentproject section text-center">
+    <h3>Recent Projects</h3>
+    <i class="fa fa-2x fa-angle-down"></i>
     <div class="container">
-        <!-- portfolio item -->
-
+        <!-- project item -->
         <div ng-repeat="project in featuredProjects">
             <!-- {{project}} -->
-            <my-project project="project", index="$index"></my-project>
-            
+            <my-project project="project", index="$index"></my-project> 
         </div>
 
         <!-- template -->

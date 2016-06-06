@@ -63,6 +63,7 @@ a {
     &:hover{
     	color: black;
 		text-decoration: none;
+        cursor:pointer;
     }
 }
 
@@ -97,6 +98,7 @@ body {
     img {
         width: 60px;
         float: left;
+        max-height: 61px;
     }
     a {
         margin: 0 0 0 .5em;
@@ -113,7 +115,7 @@ body {
     font-size: $large;
 }
 
-img#bubble {
+img.bubble {
     border: .3em solid $main;
 }
 
@@ -184,14 +186,14 @@ hr {
 	background-position: center;
 	border: 1px solid $highlight;
 	border-radius: .3em;
-	padding: 1em;
-	margin-bottom: 1em;
+	margin: 1em;
 	position: relative;
 	transition: all .6s ease-in-out;
+    box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.3);
 
 	&:hover{
 		cursor: pointer;
-		box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.1);
+		box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.6);
 		background: rgba(0, 0, 0, 0.6) !important;
 	}
 
@@ -236,20 +238,25 @@ hr {
 
 }
 
-.btn-demo {
+.btn-demo, .muted, .btn-sourcecode {
     outline: none;
     padding: .3em 2em;
     text-align: center;
     background: transparent;
-    border: 1px solid $highlight_4;
-    color: $highlight_4;
     margin: .5em 0;
 }
 
-.btn-sourcecode {
-    outline: none;
-    padding: .3em 2em;
-    text-align: center;
+.btn-demo {
+    border: 1px solid $highlight_4;
+    color: $highlight_4;
+}
+
+.btn-sourcecode{
     border: 1px solid $highlight_2;
-    margin: .5em 0;
+    color: $highlight_2;
+}
+
+.muted {
+    border: 1px solid $darkgrey;
+    color: $main;
 }

@@ -13,13 +13,18 @@ app.config(function ($routeProvider) {
     templateUrl: 'views/partials/_me.html',
      controller: 'HomeCtrl'
   })
-  .when('/project/:index', {
+  .when('/projects/:index', {
     templateUrl: 'views/partials/_project-detail.html',
      controller: 'ProjectDetailCtrl'
   })
 
-  .when('/portfolio', {
-    templateUrl: 'views/partials/_portfolio.html',
+  .when('/projects', {
+    templateUrl: 'views/partials/_projects.html',
+    controller: 'HomeCtrl'
+  })
+
+   .when('/resume', {
+    templateUrl: 'views/partials/_resume.html',
     controller: 'HomeCtrl'
   })
 
