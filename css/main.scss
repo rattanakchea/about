@@ -236,3 +236,21 @@ hr {
     }
 
 }
+
+.btn-demo {
+    outline: none;
+    padding: .3em 2em;
+    text-align: center;
+    background: transparent;
+    border: 1px solid $highlight_4;
+    color: $highlight_4;
+    margin: .5em 0;
+}
+
+.btn-sourcecode {
+    outline: none;
+    padding: .3em 2em;
+    text-align: center;
+    border: 1px solid $highlight_2;
+    margin: .5em 0;
+}

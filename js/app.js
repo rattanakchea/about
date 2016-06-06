@@ -18,6 +18,11 @@ app.config(function ($routeProvider) {
      controller: 'ProjectDetailCtrl'
   })
 
+  .when('/portfolio', {
+    templateUrl: 'views/partials/_portfolio.html',
+    controller: 'HomeCtrl'
+  })
+
   .otherwise({
     redirectTo: '/'
   });
