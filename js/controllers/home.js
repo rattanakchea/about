@@ -13,8 +13,11 @@ app.controller('HomeCtrl', function($scope, ProjectSvc) {
     ProjectSvc.getProjects().then(function(data){
         //console.log(data.data.projects);  //19 projects
 
-        $scope.projects = data.data.projects;
+        ProjectSvc.cachedProjects = data.data.projects;
+        console.log('cached: ', ProjectSvc.cachedProjects);
         
+        $scope.projects = data.data.projects;
+
         $scope.featuredProjects = data.data.projects.slice(0, 6);
 
         console.log($scope.featuredProjects);
@@ -23,6 +26,13 @@ app.controller('HomeCtrl', function($scope, ProjectSvc) {
     }, function(err){
         console.log(err);
     })
+
+
+    //set current project into Project Svc to be used in project detail
+    $scope.setCurrentProject = function(index){
+        ProjectSvc.currentProject = project;
+
+    }
 
 
 });

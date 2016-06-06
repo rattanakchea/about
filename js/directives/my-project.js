@@ -8,7 +8,8 @@ app.directive('myProject', [function() {
       restrict: 'E',
       templateUrl: '/views/partials/_project.html',
       scope: {
-        project: "="
+        project: "=",
+        index: "="
       }
     };
 

@@ -13,9 +13,9 @@ app.config(function ($routeProvider) {
     templateUrl: 'views/partials/_me.html',
      controller: 'HomeCtrl'
   })
-  .when('/project/:id', {
+  .when('/project/:index', {
     templateUrl: 'views/partials/_project-detail.html',
-     controller: 'HomeCtrl'
+     controller: 'ProjectDetailCtrl'
   })
 
   .otherwise({

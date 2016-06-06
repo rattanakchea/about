@@ -1,0 +1,24 @@
+<div class="project-detail">
+    <div class="container">
+        <div class="row section">
+            {{currentProject | json}}
+        </div>
+        <div class="row section">
+            <div class="col-xs-12 col-md-4">
+                <img ng-src="{{currentProject.links.image}}" alt="profile image" width="100%" class="project-wrapper">
+            </div>
+            <div class="col-xs-12 col-md-6 col-md-offset-1">
+                <h3>{{currentProject.title}}</h3>
+                <p>{{currentProject.description}}</p>
+                <div>
+                    <p ng-show="currentProject.links.source">
+                        <a ng-href="{{currentProject.links.source}}">Source Code</a>
+                    </p>
+                    <p ng-show="currentProject.links.demo">
+                        <a ng-href="{{currentProject.links.demo}}">Demo</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
