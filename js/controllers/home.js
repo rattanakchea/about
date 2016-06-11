@@ -57,4 +57,10 @@ app.controller('HomeCtrl', function($scope, ProjectSvc) {
     }
 
 
+    $scope.buildSlug = function (project){
+        if (project.slug) return project.slug;
+        else return project.title;
+    }
+
+
 });

@@ -7,7 +7,7 @@
         <!-- project item -->
         <div ng-repeat="project in featuredProjects">
             <!-- {{project}} -->
-            <my-project project="project", index="$index"></my-project> 
+            <my-project project="project", slug="buildSlug(project)"></my-project> 
         </div>
 
         <!-- template -->

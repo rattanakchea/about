@@ -55,11 +55,6 @@ body {
   background-size: 50% 100%;
 }
 
-.navbar-fixed-top {
-  top: 6px;
-  /*leave space for border*/
-}
-
 .header {
   padding-top: 1em;
 }

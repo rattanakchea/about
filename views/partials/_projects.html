@@ -6,7 +6,7 @@
             
             <div ng-repeat="project in projects | limitTo : itemsPerPage : start">
                 <!-- {{project}} -->
-                <my-project project="project" , index="project.id"></my-project>
+                <my-project project="project" , slug="buildSlug(project)"></my-project>
             </div>
         </div>
         <div class="row">

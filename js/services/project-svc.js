@@ -6,10 +6,8 @@ app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
 
     var preject_url = 'https://dl.dropboxusercontent.com/u/2122820/hosted_json/project.json';
 
-
     var svc = {};
     svc.cachedProjects = [];
-
 
     svc.getProjects = function() {
         return $http.get(preject_url);
@@ -18,7 +16,6 @@ app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
     //return a promise
     svc.retrieveProject = function(index) {
     	var deferred = $q.defer();
-
     	if (svc.cachedProjects.length > 0 && index >= svc.cachedProjects.length){
     		deferred.reject("Invalid index passed in");
 		}
@@ -38,7 +35,49 @@ app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
         return deferred.promise;  
     }
 
+    function lookUp(slug) {
+        for (var i=0; i < svc.cachedProjects.length; i++){
+            if (svc.cachedProjects[i].slug && svc.cachedProjects[i].slug == slug) {
+                return svc.cachedProjects[i];
+            } else if (svc.cachedProjects[i].title == slug) {
+                return svc.cachedProjects[i];
+            
+            }
+        }
+        return null;
+    }
 
+    //return a promise
+    svc.retrieveProjectById = function(id) {
+        var deferred = $q.defer();
+       
+        if (svc.cachedProjects.length > 0 ) {    
+             var found = lookUp(id);
+                if (!found) {
+                    deferred.reject ({error: 'not found', data: null});
+                } else {
+                    deferred.resolve(found);
+                }
+
+        } else {
+            init().then(function(){
+                var found = lookUp(id);
+                //console.log('found: ', found);
+                if (!found) {
+                    deferred.reject ({error: 'not found', data: null});
+                } else {
+                     deferred.resolve(found);
+                }
+            })
+        }
+
+        return deferred.promise;  
+    }
+
+     //return a promise
+    svc.retrieveProjectBySlug = function(slug) {
+       return svc.retrieveProjectById(slug)
+    }
 
 
 
