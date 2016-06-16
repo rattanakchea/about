@@ -1,5 +1,5 @@
 'use strict';
-var app = angular.module('appName', [
+var app = angular.module('myApp', [
   'ngRoute'
   ]);
 

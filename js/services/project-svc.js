@@ -4,13 +4,13 @@ var app = app || {};
 
 app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
 
-    var preject_url = 'https://dl.dropboxusercontent.com/u/2122820/hosted_json/project.json';
+    var project_url = 'https://dl.dropboxusercontent.com/u/2122820/hosted_json/project.json';
 
     var svc = {};
     svc.cachedProjects = [];
 
     svc.getProjects = function() {
-        return $http.get(preject_url);
+        return $http.get(project_url);
     }
 
     //return a promise
@@ -60,7 +60,10 @@ app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
                 }
 
         } else {
-            init().then(function(){
+            init().then(function(data){
+                //console.log('---------');
+                svc.cachedProjects = data.data.projects;
+
                 var found = lookUp(id);
                 //console.log('found: ', found);
                 if (!found) {

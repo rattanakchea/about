@@ -21,7 +21,7 @@ app.controller('HomeCtrl', function($scope, ProjectSvc) {
 
     }, function(err){
         console.log(err);
-    })
+    });
 
 
     //set current project into Project Svc to be used in project detail
