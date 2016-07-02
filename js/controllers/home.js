@@ -31,10 +31,13 @@ app.controller('HomeCtrl', function($scope, ProjectSvc) {
     }
 
 
-    // portfolio page
+    // projects page
     $scope.start = 0;
     $scope.itemsPerPage = 6;
 
+    $scope.parse = function(val){
+        $scope.itemsPerPage = parseInt(val);
+    }
 
     $scope.prev = function(){
         $scope.start -= $scope.itemsPerPage;
@@ -44,12 +47,15 @@ app.controller('HomeCtrl', function($scope, ProjectSvc) {
         console.log('next');
         if ($scope.canGoNext()){
              $scope.start = $scope.start + $scope.itemsPerPage;
+        } else {
+            console.log('cant go next');
         }
+
        
     };
 
     $scope.canGoNext = function(){
-        return $scope.start <= ($scope.projects.length - $scope.itemsPerPage);
+        return $scope.start < $scope.projects.length - $scope.itemsPerPage;
     }
 
     $scope.canGoBack = function(){

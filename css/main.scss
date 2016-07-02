@@ -1,6 +1,6 @@
 /*----------- Color --------------- */
 
-$main: #727878; /*grey*/
+$main: #000; /*black*/
 
 $highlight: #fcac45;
 
@@ -115,12 +115,11 @@ body {
 }
 
 img.bubble {
-    border: .3em solid $main;
+    border: .1em solid #ccc;
 }
 
 .section {
-    margin: 2.5em 0 1em;
-    padding: 1em 0;
+    padding: 2.5em 0 2em;
 }
 
 

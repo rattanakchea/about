@@ -1,22 +1,35 @@
-<div class="portfolio">
+<div class="portfolio section">
     <div class="container text-center">
-        <div class="row section">
+        <div class="row">
             <h3>My Projects</h3>
+            <p>Click on each thumbnail for more info, source code and demo.</p>
             <i class="fa fa-2x fa-angle-down"></i>
-            
-            <div ng-repeat="project in projects | limitTo : itemsPerPage : start">
-                <!-- {{project}} -->
+            <div class="row">
+                <div class="col-md-4">
+                    <p style="text-align:left; padding-left:30px;">
+                        <label for="filter">Filter : </label>
+                        <select ng-model="itemsPerPage" ng-change="parse(itemsPerPage)" style="width:100px;">
+                            <option value="3" ng-selected="itemsPerPage == 3"> 3 </option>
+                            <option value="6" ng-selected="itemsPerPage == 6"> 6 </option>
+                            <option value="9" ng-selected="itemsPerPage == 9"> 9 </option>
+                        </select>
+                        
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" placeholder="Search ..." ng-model="searchText">
+                </div>
+                <div class="col-md-4">
+                    
+                </div>
+            </div>
+            <div ng-repeat="project in projects | filter:searchText | limitTo : itemsPerPage : start">
                 <my-project project="project" , slug="buildSlug(project)"></my-project>
             </div>
         </div>
         <div class="row">
-
-            <button ng-href="" ng-click="prev()" ng-disabled="!canGoBack()"
-            ng-class="canGoBack() ? 'btn-sourcecode' : 'muted' ">Prev</button>
-        
-            <button ng-href="" ng-click="next()" ng-disabled="!canGoNext()"
-            ng-class="canGoNext() ? 'btn-demo' : 'muted' ">Next</button>
-           
+            <button ng-href="" ng-click="prev()" ng-disabled="!canGoBack()" ng-class="canGoBack() ? 'btn-sourcecode' : 'muted' ">Prev</button>
+            <button ng-href="" ng-click="next()" ng-disabled="!canGoNext()" ng-class="canGoNext() ? 'btn-demo' : 'muted' ">Next</button>
         </div>
     </div>
 </div>

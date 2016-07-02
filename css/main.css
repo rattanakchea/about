@@ -1,5 +1,5 @@
 /*----------- Color --------------- */
-/*grey*/
+/*black*/
 /*orange*/
 /*----------- Font --------------- */
 /* Sticky footer styles
@@ -42,7 +42,7 @@ a:hover {
 
 body {
   font: 1.6em "Helvetica Neue", "Open Sans", Helvetica, Arial, sans-serif;
-  color: #727878;
+  color: #000;
 }
 
 .border {
@@ -81,12 +81,11 @@ body {
 }
 
 img.bubble {
-  border: 0.3em solid #727878;
+  border: .1em solid #ccc;
 }
 
 .section {
-  margin: 2.5em 0 1em;
-  padding: 1em 0;
+  padding: 2.5em 0 2em;
 }
 
 /*recent project section*/
@@ -117,7 +116,7 @@ footer#contact a {
 }
 
 footer#contact a:hover {
-  color: #727878;
+  color: #000;
   text-decoration: none;
 }
 
@@ -221,5 +220,5 @@ hr {
 
 .muted {
   border: 1px solid #434242;
-  color: #727878;
+  color: #000;
 }
