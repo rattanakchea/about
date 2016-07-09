@@ -1,16 +1,13 @@
 <!-- project directive template -->
 <!-- portfolio item -->
-<div class="col-sm-6 col-md-4 col-lg-4">
+<div class="col-sm-6 col-md-4 col-lg-4 project">
+     <a ng-href="#/projects/{{slug}}" ng-click="setCurrentProject(project)">
+        <div class="project-wrapper" style="background-image: url({{project.links.image}})">
+        </div>
+    <a/>
 
-    <div class="project-wrapper" style="background-image: url({{project.links.image}})">
-    		<a href="#/projects/{{slug}}" ng-click="setCurrentProject(project)">
-            <div class="project-title text-center">
-                <h4>{{project.title}}</h4>
-            </div>
-            <div class="detail">
-                Read More
-            </div>
-            </a>
+    <div class="project-title">
+        <h5>{{project.title}}</h5>
     </div>
 </div>
 <!-- end p item -->
