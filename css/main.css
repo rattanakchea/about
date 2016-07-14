@@ -1,17 +1,18 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 /*----------- Color --------------- */
 /*black*/
 /*orange*/
 /*----------- Font --------------- */
 /* Sticky footer styles
 -------------------------------------------------- */
-h4 {
-  font-size: 1.3em;
-  font-weight: 600;
-}
-
 html {
   position: relative;
   min-height: 100%;
+}
+
+h4 {
+  font-size: 1.3em;
+  font-weight: 600;
 }
 
 body #content {
@@ -41,12 +42,11 @@ a {
 
 a:hover {
   color: black;
-  text-decoration: none;
   cursor: pointer;
 }
 
 body {
-  font: 1.6em "Helvetica Neue", "Open Sans", Helvetica, Arial, sans-serif;
+  font: 1.6em "Helvetica Neue", "Open Sans", Helvetica, Arial, "Roboto", sans-serif;
   color: #000;
 }
 
@@ -95,6 +95,10 @@ img.bubble {
 
 .background-grey {
   background: #f8f7f5;
+}
+
+.background-x {
+  background: #fec85d;
 }
 
 .project-detail {
