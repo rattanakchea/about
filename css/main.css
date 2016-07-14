@@ -97,6 +97,11 @@ img.bubble {
   background: #f8f7f5;
 }
 
+.background-darkgrey {
+  background: #434242;
+  color: white;
+}
+
 .background-x {
   background: #fec85d;
 }
@@ -220,4 +225,18 @@ hr {
 .muted {
   border: 1px solid #434242;
   color: #000;
+}
+
+.bottom_effect {
+  background-color: #f8f7f5;
+}
+
+.bottom_effect .effect {
+  border-top: 3px dotted #434242;
+  font-size: 0;
+  height: auto;
+  line-height: 0;
+  /* display: block; */
+  width: auto;
+  position: relative;
 }

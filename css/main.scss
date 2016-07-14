@@ -129,6 +129,11 @@ img.bubble {
      background: $lightgrey;
 }
 
+.background-darkgrey {
+     background: $darkgrey;
+     color: white;
+}
+
 .background-x {
      background: $highlight_2;
 }
@@ -256,6 +261,16 @@ hr {
     color: $main;
 }
 
-.resume a {
+.bottom_effect {
+    background-color: $lightgrey;
 
+    .effect {
+        border-top: 3px dotted $darkgrey;
+        font-size: 0;
+        height: auto;
+        line-height: 0;
+        /* display: block; */
+        width: auto;
+        position: relative;
+    }
 }
