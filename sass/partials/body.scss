@@ -1,0 +1,164 @@
+img.bubble {
+    border: .1em solid #ccc;
+}
+
+.section {
+    padding: 2.5em 0 2em;
+}
+
+
+.background-grey {
+     background: $lightgrey;
+}
+
+.background-darkgrey {
+     background: $darkgrey;
+     color: white;
+}
+
+.background-x {
+     background: $highlight_2;
+}
+
+.project-detail {
+	background: $lightgrey;
+}
+
+
+/*Footer Section*/
+
+footer#contact {
+    background-color: $darkgrey;
+    h3,
+    h4 {
+        color: white;
+    }
+    p {
+        color: #ccc;
+    }
+    a {
+        color: $highlight;
+        &:hover {
+            color: $main;
+            text-decoration: none;
+        }
+        &.btn-circle {
+            padding: 7px 16px;
+            border: 1px solid #ccc;
+            opacity: .5;
+            border-radius: 50%;
+            font-size: 2em;
+            background: 0 0;
+            -webkit-transition: background .3s ease-in-out;
+            -moz-transition: background .3s ease-in-out;
+            transition: background .3s ease-in-out;
+        }
+    }
+}
+
+hr {
+    margin: 2em 0;
+    border-color: $lightgrey;
+    opacity: .2;
+}
+
+
+/*project section*/
+
+.card-image {
+	height: 207px;
+	max-height: 230px;
+	background-size: cover;
+	position: relative;
+	transition: all .6s ease-in-out;
+    border-bottom: 1px solid $lightgrey;
+
+	&:hover{
+		cursor: pointer;
+        opacity: 0.8;
+		
+	}
+
+	a {
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+	.detail {
+		text-align: center;
+		vertical-align: middle;
+		line-height: 207px;
+		opacity: 0;
+		transition: all .3s ease-in-out;
+		font-size: .5em;
+		font-weight: 500;
+
+		&:hover {
+			color:white;
+			opacity: 1;
+			font-size: $large;
+			color: $highlight;
+
+		};
+	}
+}
+
+.card {
+    
+    border: none;
+    border-radius: 4px;
+    color: #333;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1.5em;
+    margin-top: 1em;
+
+    a.card-wrapper {
+        display:block;
+        padding: 0;
+        background-color: #fff;
+    }
+
+    .card-content {
+        padding: 16px;
+    }
+}
+
+
+
+.btn-demo, .muted, .btn-sourcecode {
+    outline: none;
+    padding: .3em 2em;
+    text-align: center;
+    background: transparent;
+    margin: .5em 0;
+}
+
+.btn-demo {
+    border: 1px solid $highlight_4;
+    color: $highlight_4;
+}
+
+.btn-sourcecode{
+    border: 1px solid $highlight_2;
+    color: $highlight_2;
+}
+
+.muted {
+    border: 1px solid $darkgrey;
+    color: $main;
+}
+
+.bottom_effect {
+    background-color: $lightgrey;
+
+    .effect {
+        border-top: 3px dotted $darkgrey;
+        font-size: 0;
+        height: auto;
+        line-height: 0;
+        /* display: block; */
+        width: auto;
+        position: relative;
+    }
+}

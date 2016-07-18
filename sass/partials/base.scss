@@ -1,0 +1,51 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+h4 {
+    font-size: $large;
+    font-weight: 600;
+   
+}
+
+body #content {
+    min-height: 700px;
+    line-height: 20px;
+}
+
+
+/*fixed-navbar*/
+
+body > #content {
+    padding: 60px 0px 0;
+}
+
+.content .text-muted {
+    margin: 20px 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    line-height: 1.7em;
+}
+
+a {
+    color: $highlight;
+    font-weight: 500;
+
+    &:hover{
+        color: black;
+        cursor:pointer;
+    }
+}
+
+
+body {
+    font: 1.6em $font-stack;
+    color: $main;
+}

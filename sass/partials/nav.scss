@@ -1,0 +1,41 @@
+
+
+.border {
+    height: 6px;
+    border: 0;
+    background-color: red;
+    background-image: linear-gradient( to right, $highlight_1, $highlight_1 25%, $highlight_2 25%, $highlight_2 50%, $highlight_3 50%, $highlight_3 75%, $highlight_4 75%, $highlight_4 100%, $highlight_4 100%);
+    -webkit-background-size: 50% 100%;
+    -moz-background-size: 50% 100%;
+    background-size: 50% 100%;
+}
+
+.navbar-fixed-top {
+   
+}
+
+.header {
+    padding: 0.7em 0;
+}
+
+#logo {
+    img {
+        width: 60px;
+        float: left;
+        max-height: 61px;
+    }
+    a {
+        margin: 0 0 0 .5em;
+        color: $highlight;
+        font-weight: 600;
+        font-size: 1.3em;
+        span {
+            font-weight: 200;
+        }
+    }
+}
+
+.navbar-nav {
+    /*	float: right;*/
+    font-size: $large;
+}
