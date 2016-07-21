@@ -27,6 +27,10 @@ app.config(function ($routeProvider) {
     templateUrl: 'views/partials/_resume.html',
     controller: 'HomeCtrl'
   })
+   .when('/blog', {
+    templateUrl: 'views/partials/_blog.html',
+    controller: 'BlogCtrl'
+  })
 
   .otherwise({
     redirectTo: '/'

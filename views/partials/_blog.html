@@ -1,0 +1,35 @@
+<div class="blog">
+    <div class="section background-darkgrey">
+        <div class="container">
+            <h3 class="text-center">Latest Posts
+            <span>
+            <a class="btn btn-primary pull-right" href="https://rattanakchea.github.io/my-blog/">BLOG Site</a></span>
+            </h3>
+            
+        </div>
+    </div>
+
+    <div class="bottom_effect">
+        <div class="effect"></div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <p class="grey">This is RSS feed reader from my <a href="https://rattanakchea.github.io/my-blog/">BLOG.</a></p>
+            
+            <div ng-repeat="post in posts">
+                <h2><a ng-href="{{post.id}}">{{post.title}}</a></h2>
+                <p class="grey"><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.published | date }}</p>
+                <p>{{post.summary}}</p>
+                <a ng-href="{{post.id}}" class="btn btn-demo">Read More</a>
+                <hr>
+            </div>
+            
+            <!-- template -->
+            <!-- <h2><a href="">Using JavaScript Array</a></h2>
+            <p><i class="fa fa-calendar" aria-hidden="true"></i> 2016-07-12</p>
+            <p>Array is perhaps most used data structures because it is so simple and easy to use. Yet its usage and syntax vary from one language to another.</p>
+            <a ng-href="" class="btn btn-demo">Read More</a> -->
+        </div>
+    </div>
+</div>

@@ -18,11 +18,13 @@ $highlight_3: #4db8de;
 $highlight_4: #a378fc;
 $border: #e6e7e9;
 
-
-
 /*----------- Font --------------- */
 $font-stack: Helvetica,  "0pen Sans",  sans-serif;
 $xxlarge: 4em;
 $xlarge: 3em;
 $large: 1.3em;
 $regular: 1em;
+
+.grey {
+	color: grey;
+}

@@ -9,6 +9,10 @@
 /*black*/
 /*orange*/
 /*----------- Font --------------- */
+.grey {
+  color: grey;
+}
+
 /*@import 'partials/mixins';*/
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -115,6 +119,10 @@ img.bubble {
   background: #fec85d;
 }
 
+.background-3 {
+  background: #4db8de;
+}
+
 .project-detail {
   background: #f8f7f5;
 }
@@ -156,7 +164,7 @@ footer#contact a.btn-circle {
 
 hr {
   margin: 2em 0;
-  border-color: #f8f7f5;
+  border-color: grey;
   opacity: .2;
 }
 

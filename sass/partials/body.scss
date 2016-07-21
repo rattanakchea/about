@@ -20,6 +20,10 @@ img.bubble {
      background: $highlight_2;
 }
 
+.background-3 {
+     background: $highlight_3;
+}
+
 .project-detail {
 	background: $lightgrey;
 }
@@ -58,7 +62,7 @@ footer#contact {
 
 hr {
     margin: 2em 0;
-    border-color: $lightgrey;
+    border-color: grey;
     opacity: .2;
 }
 
