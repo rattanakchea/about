@@ -3,6 +3,12 @@ var app = angular.module('appName', [
   'ngRoute'
   ]);
 
+//constant configs
+app.constant("CONFIG", {
+    PROJECT_URI: 'https://dl.dropboxusercontent.com/u/2122820/rattanakchea.github.io/personal-projects.json',
+    WORK_URI: 'https://dl.dropboxusercontent.com/u/2122820/rattanakchea.github.io/work-projects.json'
+});
+
 app.config(function ($routeProvider) {
   $routeProvider
   .when('/', {
@@ -13,7 +19,7 @@ app.config(function ($routeProvider) {
     templateUrl: 'views/partials/_me.html',
      controller: 'HomeCtrl'
   })
-  .when('/projects/:index', {
+  .when('/projects/:slug', {
     templateUrl: 'views/partials/_project-detail.html',
      controller: 'ProjectDetailCtrl'
   })

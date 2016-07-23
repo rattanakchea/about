@@ -24,10 +24,6 @@ img.bubble {
      background: $highlight_3;
 }
 
-.project-detail {
-	background: $lightgrey;
-}
-
 
 /*Footer Section*/
 
@@ -139,13 +135,13 @@ hr {
 }
 
 .btn-demo {
-    border: 1px solid $highlight_4;
-    color: $highlight_4;
+    color: $main;
+    background: $highlight_2;
 }
 
 .btn-sourcecode{
-    border: 1px solid $highlight_2;
-    color: $highlight_2;
+    color: $main;
+    background: $highlight_3;
 }
 
 .muted {

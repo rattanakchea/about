@@ -1,27 +1,40 @@
 <div class="project-detail">
     <div class="container">
-        <div class="row section">
+        <span>
             <!-- {{currentProject | json}} -->
-        </div>
+        </span>
         <div class="row section" ng-show="currentProject">
             <div class="col-xs-12 col-md-4">
-                <img ng-src="{{currentProject.links.image}}" alt="profile image" width="100%" class="project-wrapper">
+                <img ng-src="{{currentProject.image}}" width="90%" alt="{{currentProject.title}}" class="project-wrapper">
             </div>
-            <div class="col-xs-12 col-md-6 col-md-offset-1">
+            <div class="col-xs-12 col-md-7 col-md-offset-1">
                 <h3>{{currentProject.title}}</h3>
                 <p>{{currentProject.description}}</p>
                 <hr />
-                <div class="row">
-                    <p ng-show="currentProject.links.source">
-                        <a ng-href="{{currentProject.links.source}}" class="btn-sourcecode">Source Code</a>
+                <div ng-show="currentProject.tasks">
+                    <h4>Summary of Tasks</h4>
+                    <ul>
+                        <li ng-repeat="task in currentProject.tasks">{{task}}</li>
+                    </ul>
+                    <hr>
+                </div>
+                <div>
+                    <p ng-show="currentProject.source">
+                        <a ng-href="{{currentProject.source}}" class="btn-sourcecode">Source Code</a>
                     </p>
-                    <p ng-show="currentProject.links.demo">
-                      <a ng-href="{{currentProject.links.demo}}" class="btn-demo">Demo
+                    <p ng-show="currentProject.demo">
+                      <a ng-href="{{currentProject.demo}}" class="btn-demo">Demo
                        </a>
                     </p>
                 </div>
             </div>
         </div>
+        <div class="row" ng-if="currentProject.moreImages">
+            <span ng-repeat="img in currentProject.moreImages">
+                    <img ng-src="{{img}}" class="project-wrapper" width="33%" height="250px" class="project-wrapper">
+            </span>
+        </div>
+        
 
         <div class="row section" ng-show="!currentProject">
             <div class="col-xs-12 col-md-8 col-md-offset-2">

@@ -1,0 +1,19 @@
+.project-detail {
+    background: white;
+    padding: 2em 0;
+
+    ul li {        
+        margin-top: 1em;
+
+        &:before{
+            content: "\f00c"; /* FontAwesome Unicode */
+            font-family: FontAwesome;
+            display: inline-block;
+            margin-right: 2em;
+        }
+    }
+
+    img {
+        border: 1px solid grey;
+    }
+}

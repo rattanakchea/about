@@ -1,14 +1,5 @@
 <div ng-include="'views/partials/_me.html'"></div>
-<!-- Recent Project Section -->
-<div class="row background-grey section text-center">
-    <h3>Recent Projects</h3>
-    <p>What I have worked on recently, or you can <a href="/#/projects">View All</a></p>
-    <i class="fa fa-2x fa-angle-down"></i>
-    <div class="container">
-        <!-- project item -->
-        <div ng-repeat="project in featuredProjects">
-            <!-- {{project}} -->
-            <my-project project="project", slug="buildSlug(project)"></my-project> 
-        </div>
-    </div>
-</div>
+
+<div ng-include="'views/partials/recent-work-section.html'"></div>
+
+<div ng-include="'views/partials/recent-project-section.html'"></div>

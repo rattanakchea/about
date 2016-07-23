@@ -38,3 +38,11 @@
     /*	float: right;*/
     font-size: $large;
 }
+
+#logo a span {
+    padding-right: .5em;
+    border-top: 2px solid $highlight_2;
+    border-right: 2px solid $highlight_2;
+    border-bottom: 2px solid $highlight_2;
+    border-radius: 0 5px 5px 0;
+}

@@ -21,6 +21,10 @@ html {
   min-height: 100%;
 }
 
+p {
+  line-height: 1.5em;
+}
+
 h4 {
   font-size: 1.3em;
   font-weight: 600;
@@ -58,7 +62,7 @@ a:hover {
 }
 
 body {
-  font: 1.6em Helvetica, "0pen Sans", sans-serif;
+  font: 1.6em "open sans", Helvetica, sans-serif;
   color: #000;
 }
 
@@ -98,6 +102,14 @@ body {
   font-size: 1.3em;
 }
 
+#logo a span {
+  padding-right: .5em;
+  border-top: 2px solid #fec85d;
+  border-right: 2px solid #fec85d;
+  border-bottom: 2px solid #fec85d;
+  border-radius: 0 5px 5px 0;
+}
+
 img.bubble {
   border: .1em solid #ccc;
 }
@@ -121,10 +133,6 @@ img.bubble {
 
 .background-3 {
   background: #4db8de;
-}
-
-.project-detail {
-  background: #f8f7f5;
 }
 
 /*Footer Section*/
@@ -234,13 +242,13 @@ hr {
 }
 
 .btn-demo {
-  border: 1px solid #a378fc;
-  color: #a378fc;
+  color: #000;
+  background: #fec85d;
 }
 
 .btn-sourcecode {
-  border: 1px solid #fec85d;
-  color: #fec85d;
+  color: #000;
+  background: #4db8de;
 }
 
 .muted {
@@ -260,4 +268,25 @@ hr {
   /* display: block; */
   width: auto;
   position: relative;
+}
+
+.project-detail {
+  background: white;
+  padding: 2em 0;
+}
+
+.project-detail ul li {
+  margin-top: 1em;
+}
+
+.project-detail ul li:before {
+  content: "\f00c";
+  /* FontAwesome Unicode */
+  font-family: FontAwesome;
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.project-detail img {
+  border: 1px solid grey;
 }

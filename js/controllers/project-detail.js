@@ -4,25 +4,24 @@ var app = app || {};
 
 app.controller('ProjectDetailCtrl', function($scope, ProjectSvc, $routeParams) {
 
-    var projectIndex = $routeParams.index;
-
-    console.log('project slug: ', projectIndex);
+    var slug = $routeParams.slug;
 
 
-    ProjectSvc.retrieveProjectBySlug(projectIndex).then(success, fail);
+    if (ProjectSvc.currentWork) {
+        $scope.currentProject = ProjectSvc.currentWork;
+    } else {
+        ProjectSvc.retrieveProjectBySlug(slug).then(success, fail);
 
-    function success(data){
-        $scope.currentProject = data;
-        console.log('success');
+        function success(data) {
+            $scope.currentProject = data;
+            console.log('success');
+        }
+
+        function fail(err) {
+            console.log(err)
+            $scope.currentProject = err.data;
+        }
     }
-
-    function fail(err){
-        console.log(err)
-        $scope.currentProject = err.data;
-    }
-
-
-
 
 
 });

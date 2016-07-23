@@ -2,15 +2,13 @@
 
 var app = app || {};
 
-app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
-
-    var preject_url = 'https://dl.dropboxusercontent.com/u/2122820/hosted_json/project.json';
+app.factory('ProjectSvc', ['$http', '$q', 'CONFIG', function($http, $q, CONFIG) {
 
     var svc = {};
     svc.cachedProjects = [];
 
-    svc.getProjects = function() {
-        return $http.get(preject_url);
+    svc.getProjects = function( URI ) {
+        return $http.get( URI );
     }
 
     //return a promise
@@ -70,7 +68,6 @@ app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
                 }
             })
         }
-
         return deferred.promise;  
     }
 
@@ -83,13 +80,15 @@ app.factory('ProjectSvc', ['$http', '$q', function($http, $q) {
 
     function init(index) {
     	console.log('init');
-        return svc.getProjects().then(function(data) {
+        return svc.getProjects(CONFIG.PROJECT_URI).then(function(data) {
             svc.cachedProjects = data.data.projects;
         });
     }
 
-
-
+    svc.buildSlug = function (project){
+        if (project.slug) return project.slug;
+        else return project.title;
+    }
 
 
     return svc;
