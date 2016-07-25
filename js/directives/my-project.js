@@ -16,7 +16,13 @@ app.directive('myProject', function(ProjectSvc, $location) {
       		ProjectSvc.currentWork = project;
       		var path = "/projects/" + ProjectSvc.buildSlug(project);
       		$location.path(path);	
-      	}
+      	},
+
+        //get project image
+        scope.getProjectImage = function(image) {
+          //console.log('here', image);
+          return image || 'https://placehold.it/360x207?text=NotAvailable';
+        };
       }
     };
 

@@ -54,10 +54,15 @@ app.controller('HomeCtrl', function($scope, ProjectSvc, CONFIG) {
 
     $scope.canGoNext = function(){
         return $scope.start < $scope.projects.length - $scope.itemsPerPage;
-    }
+    };
 
     $scope.canGoBack = function(){
         return $scope.start > 0;
+    };
+
+    $scope.getProjectImage = function(image) {
+        console.log('here', image);
+        return image || 'https://placehold.it/350x150';
     }
 
 });

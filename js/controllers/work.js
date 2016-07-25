@@ -11,12 +11,14 @@ app.controller('WorkCtrl', function($scope, ProjectSvc, CONFIG ) {
         //console.log(data.data.projects);  //19 projects
         //ProjectSvc.cachedProjects = data.data.projects;
              
-        $scope.workProjects = data.data.projects;
+        
+        data.data.projects.sort(function() { return 0.5 - Math.random() });
+        
         console.log(data.data.projects);
         $scope.featuredWorkProjects = data.data.projects.slice(0, 3);
         
         //shuffle
-        $scope.featuredWorkProjects.sort(function() { return 0.5 - Math.random() });
+        $scope.featuredWorkProjects;
 
     }, function(err){
         console.log(err);

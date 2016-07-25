@@ -1,16 +1,14 @@
 <!-- project directive template -->
 <!-- portfolio item -->
 <div class="col-sm-6 col-md-4 col-lg-4">
-	<div class="card">
-		 <!-- <a ng-href="#/projects/{{slug}}" ng-click="setCurrentProject(project)" class="card-wrapper"> -->
-		 <a ng-click="setCurrentProject(project)" class="card-wrapper">
-	        <div class="card-image" style="background-image: url({{project.image}})"></div>
-    
-		    <div class="card-content">
-		        <h4>{{project.title}}</h4>
-		    </div>
-	    </a>
-	</div>
-    
+    <div class="card">
+        <!-- <a ng-href="#/projects/{{slug}}" ng-click="setCurrentProject(project)" class="card-wrapper"> -->
+        <a ng-click="setCurrentProject(project)" class="card-wrapper">
+            <div class="card-image" style="background-image: url({{getProjectImage(project.image)}})"></div>
+            <div class="card-content">
+                <h4>{{project.title}}</h4>
+            </div>
+        </a>
+    </div>
 </div>
 <!-- end p item -->

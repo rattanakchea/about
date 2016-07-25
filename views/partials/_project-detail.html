@@ -5,7 +5,9 @@
         </span>
         <div class="row section" ng-show="currentProject">
             <div class="col-xs-12 col-md-4">
-                <img ng-src="{{currentProject.image}}" width="90%" alt="{{currentProject.title}}" class="project-wrapper">
+                <img ng-if="currentProject.image" ng-src="{{currentProject.image}}" width="90%" alt="{{currentProject.title}}" class="project-wrapper">
+
+                <img ng-if="!currentProject.image" ng-src="https://placehold.it/380x250?text=NotAvailable" width="100%" alt="{{currentProject.title}}" class="project-wrapper">
             </div>
             <div class="col-xs-12 col-md-7 col-md-offset-1">
                 <h3>{{currentProject.title}}</h3>
