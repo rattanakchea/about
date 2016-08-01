@@ -1,0 +1,59 @@
+#app-wrapper {
+  height: 680px;
+  overflow: hidden;
+  transition: 0s ease-out;
+  margin-top: 25px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../img/android-skin.png");
+  background-size: 368.134px 680px;
+  background-position: 50% 0px;
+  background-repeat: no-repeat;
+}
+
+#app-wrapper #app-status {
+  background-color: #E9EBEF;
+  padding-top: 5px;
+  height: 15px;
+}
+
+#app-wrapper #app-status img.status-bar {
+  content: url("https://creator.ionic.io/img/ios-statusbar-left.png");
+  float: right;
+  height: 10px;
+}
+
+#app-wrapper #app-status img.status-bar2 {
+  content: url("https://creator.ionic.io/img/ios-statusbar-center.png");
+  float: right;
+  height: 10px;
+}
+
+#app-wrapper #content-image {
+  background: url("https://dl.dropboxusercontent.com/u/2122820/rattanakchea.github.io/areyoulucid.jpg");
+  height: calc(100% - 20px);
+  /*20px from the status height*/
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#app-wrapper #content-image img {
+  width: 100%;
+  height: 100%;
+}
+
+#app-frame {
+  height: 505px;
+  width: 320px;
+  /*relative to $screen-width*/
+  /*margin-top: 57.0576px;*/
+  border-radius: 2px;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  color: white;
+  background-color: white;
+  position: relative;
+  top: 57.0576px;
+}

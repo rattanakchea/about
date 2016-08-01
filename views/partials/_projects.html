@@ -23,6 +23,7 @@
                 </div>
             </div>
             <div ng-repeat="project in projects | filter:searchText | limitTo : itemsPerPage : start">
+                <!-- myProject directive -->
                 <my-project project="project" , slug="buildSlug(project)"></my-project>
             </div>
         </div>

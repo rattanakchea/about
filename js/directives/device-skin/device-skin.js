@@ -5,9 +5,9 @@ var app = app || {};
 app.directive('deviceSkin', function() {
 	return {
       restrict: 'E',
-      templateUrl: '/js/directives/device-skin.html',
+      templateUrl: '/js/directives/device-skin/device-skin.html',
       scope: {
-        backgroundImage: "=",
+        bgImage: "=",
         width: "="
       }, 
       link: function(scope, element, attrs){

@@ -1,0 +1,81 @@
+$grey: #E9EBEF;
+
+$device-width: 368.134px; 
+$device-height: 680px;
+
+$default-display: 320px;
+
+$device-bazel: 368.134px - $default-display;
+$screen-width: $device-width - $device-bazel;
+
+
+@mixin background-image($uri){
+    background-image: url($uri);
+    background-size: $device-width $device-height;
+    background-position: 50% 0px;
+    background-repeat: no-repeat;
+}
+
+#app-wrapper {
+    height: $device-height;
+    overflow: hidden;
+    transition: 0s ease-out;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    @include background-image('../js/directives/device-skin/img/android-skin.png');
+    
+
+    #app-status {
+        background-color: $grey;
+        padding-top: 5px;
+        height: 15px;
+
+        img {
+            border: none;
+        }
+
+         img.status-bar {
+            content:url("https://creator.ionic.io/img/ios-statusbar-left.png");
+            float: right;
+            height: 10px;
+          }
+
+           img.status-bar2 {
+            content:url("https://creator.ionic.io/img/ios-statusbar-center.png");
+            float: right;
+            height: 10px;
+          }     
+    }
+
+    #content-image {
+       /* background: url('https://dl.dropboxusercontent.com/u/2122820/rattanakchea.github.io/areyoulucid.jpg');*/
+        height: calc(100% - 15px);  /*minus the status height*/
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            border:none;
+            box-sizing: inherit;
+            -webkit-box-sizing: inherit;
+        }
+    }
+}
+
+#app-frame {
+    height: 505px;
+    width: $screen-width;   /*relative to $screen-width*/
+
+    /*margin-top: 57.0576px;*/
+    border-radius: 2px;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    margin: 0 auto;
+    color: white;
+    background-color: white;
+    position: relative;
+    top: 57.0576px;
+}

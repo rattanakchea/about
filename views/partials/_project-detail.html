@@ -4,12 +4,16 @@
             <!-- {{currentProject | json}} -->
         </span>
         <div class="row section" ng-show="currentProject">
-            <div class="col-xs-12 col-md-4">
-                <img ng-if="currentProject.image" ng-src="{{currentProject.image}}" width="90%" alt="{{currentProject.title}}" class="project-wrapper">
+            <div class="col-xs-12 col-md-5">
+                <img ng-show="currentProject.image && !currentProject.mobile" ng-src="{{currentProject.image}}" width="90%" alt="{{currentProject.title}}" class="project-wrapper">
+                <!-- deviceSkin directive if mobile view is true-->
 
+              
+                <device-skin ng-show="currentProject.mobile" bg-image=currentProject.image></device-skin>
+             
                 <img ng-if="!currentProject.image" ng-src="https://placehold.it/380x250?text=NotAvailable" width="100%" alt="{{currentProject.title}}" class="project-wrapper">
             </div>
-            <div class="col-xs-12 col-md-7 col-md-offset-1">
+            <div class="col-xs-12 col-md-6 col-md-offset-1">
                 <h3>{{currentProject.title}}</h3>
                 <p>{{currentProject.description}}</p>
                 <hr />
