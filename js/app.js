@@ -1,7 +1,5 @@
 'use strict';
-var app = angular.module('appName', [
-  'ngRoute'
-  ]);
+var app = angular.module('appName', ['ngRoute', 'deviceskin']);
 
 //constant configs
 app.constant("CONFIG", {

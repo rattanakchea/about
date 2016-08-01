@@ -1,0 +1,25 @@
+{
+  "name": "deviceskin",
+  "version": "0.1.0",
+  "authors": [
+    "Rattanak Chea <rattanak.chea@gmail.com>"
+  ],
+  "description": "AngularJS directive to wrap image in a device emulator",
+  "main": "deviceskin.js",
+  "moduleType": [],
+  "keywords": [
+    "angularjs",
+    "device",
+    "skin",
+    "emulator"
+  ],
+  "license": "MIT",
+  "homepage": "http://github.com/rattanakchea/device-skin-directive",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

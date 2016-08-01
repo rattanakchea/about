@@ -9,7 +9,7 @@
                 <!-- deviceSkin directive if mobile view is true-->
 
               
-                <device-skin ng-show="currentProject.mobile" bg-image=currentProject.image></device-skin>
+                <device-skin ng-show="currentProject.mobile" bg-image=currentProject.image device-type="iphone"></device-skin>
              
                 <img ng-if="!currentProject.image" ng-src="https://placehold.it/380x250?text=NotAvailable" width="100%" alt="{{currentProject.title}}" class="project-wrapper">
             </div>
