@@ -11,12 +11,20 @@
 $ bower install device-skin
 ```
 
+Then add below
+
 ```html
-<link rel="stylesheet" type="text/css" href="device-skin.css" />
-<script type="text/javascript" src="device-skin.js"></script>
+<link href="bower_components/deviceskin/device-skin.css" rel="stylesheet">
+<script src="bower_components/deviceskin/device-skin.js"></script>
 ```
 
 
+## Usage
+
+```
+<device-skin ng-show="currentProject.mobile" bg-image={{image}} device-type="android"></device-skin>
+<device-skin ng-show="currentProject.mobile" bg-image={{image}} device-type="iphone"></device-skin>
+```
 
 ## License
 

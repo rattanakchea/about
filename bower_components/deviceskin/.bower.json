@@ -21,11 +21,11 @@
     "test",
     "tests"
   ],
-  "_release": "bc9416bcdb",
+  "_release": "81d2b30642",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "bc9416bcdbdcb06d05d23689fa58656b06325833"
+    "commit": "81d2b306428e3549be8935189507e664e96e7d62"
   },
   "_source": "https://github.com/rattanakchea/device-skin-directive.git",
   "_target": "*",
