@@ -3,18 +3,18 @@ var app = angular.module('appName', ['ngRoute', 'deviceskin']);
 
 //constant configs
 app.constant("CONFIG", {
-    PROJECT_URI: 'https://dl.dropboxusercontent.com/u/2122820/rattanakchea.github.io/personal-projects.json',
-    WORK_URI: 'https://dl.dropboxusercontent.com/u/2122820/rattanakchea.github.io/work-projects.json'
+    PROJECT_URI: 'js/data/myProjects.json',
+    WORK_URI: 'js/data/work-projects.json'
 });
 
 app.config(function ($routeProvider) {
   $routeProvider
   .when('/', {
-    templateUrl: 'views/home.html',
+    templateUrl: 'views/home',  //default to index.html inside views/home folder
     controller: 'HomeCtrl'
   })
   .when('/me', {
-    templateUrl: 'views/partials/_me.html',
+    templateUrl: 'views/home/_me.html',
      controller: 'HomeCtrl'
   })
   .when('/projects/:slug', {

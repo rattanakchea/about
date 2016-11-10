@@ -1,0 +1,72 @@
+{
+    "projects": [
+		{
+			"id": "0",
+			"slug": "lucidmedia",
+            "title": "Lucid Media",
+            "description": "LUCIDMEDIA was born at a late-night after party at the Palm Springs Film Festival, over diet cokes, a shared love for the craft and science of filmmaking, and an aversion to mediocrity. Founders Gina Leonard and Dan Strickland combined forces, harnessing decades of experience working with blue-chip brands from around the globe.",
+			"tasks" : ["Adding custom CSS style to make responsive website", "Custom Wordpress page template", "User-centric clean design" ],
+			"dateCreated": "6/20/2016",
+            "demo" : "http://areyoulucid.com/",
+			"image": "images/wordpress/areyoulucid.jpg",
+			"type": "work",
+			"mobile": true
+        },{
+			"id": "1",
+			"slug": "prideofbristolbay",
+            "title": "Pride Of Bristol Bay",
+            "description": "This client needs to set up their E-commerce web application to allow customers to place or deposite an order online, and be notified of when to pickup their orders.",
+			"tasks" : ["Setup custom e-commerce with WooCommerce to allow customers to place and reserve Salmon orders",
+						"Cutomize WooCommerce Pickup Location plugin",
+						"Work with client to improve sitewide UX" ],
+			"dateCreated": "7/23/2016",
+            "demo" : "https://prideofbristolbay.com/shop/#",
+			"image": "images/wordpress/prideofbristolbay1.jpg",
+			"type": "work"
+        },
+		{
+			"id": "2",
+			"slug": "meddle",
+            "title": "Meddle",
+            "description": "Meddile is a NEW social dating application with a fun concept. We built meddle for you single folks who don’t have time to sift through the hundreds (thousands?) of potential matches out there, as well as for your friends and family who would love to do the sifting for you!",
+			"tasks" : ["Built web application from the prototypes",
+						"Developed social dating web application with AngularJS + Firebase as backend database",
+						"Worked closely with product manager and other developers through product life cycle" ],
+			"dateCreated": "7/23/2016",
+            "demo" : "https://meddlestaging.firebaseapp.com",
+			"image": "images/meddle-project/meddle-mobile-1.jpg",
+			"moreImages": ["images/meddle-project/meddle-web-1.jpg",
+						"images/meddle-project/userflow-diagram.jpg",
+						"images/meddle-project/meddle-wireframe-1.jpg"],
+			"type": "work",
+			"mobile": true
+        },{
+			"id": 17,
+			"title": "Dental ADP",
+			"description": "For this Wordpress Ecommerce Website. I was the only developer and designer for this project. I was invoved from project planning, design, SEO, and development",
+			"demo": "http://dentaladp.com",
+			"source": "",
+			"image": "images/wordpress/wp-denal-adp.jpg"
+
+		},{
+			"id": 4,
+			"slug": "phase-rx",
+			"title": "Phase Rx",
+			"description": "",
+			"tasks" : ["Built PHP shortcode that pull and format data from internal API",
+						"Worked on sitewide UX design and user flow",
+						"Opitimize multimedias for performance" ],
+			"demo": "http://phaserx.com/",
+			"source": "",
+			"image": "images/wordpress/phase-rx.jpg"
+		},{
+			"id": 10,
+			"title": "Pain Free Move Well Chiropractic",
+			"description": "Desktop and mobile responsive website for chropractic therapy based in Lynnwood, Washington.",
+			"demo": "",
+			"source": "",
+			"image": "images/wordpress/pain-free-move-well.png"
+		}
+		
+    ]
+}

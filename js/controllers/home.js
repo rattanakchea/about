@@ -14,8 +14,20 @@ app.controller('HomeCtrl', function($scope, ProjectSvc, CONFIG) {
         //console.log('cached: ', ProjectSvc.cachedProjects);
         
         $scope.projects = data.data.projects;
+
+
+        //use underscore find {"featured": true}
+        $scope.featuredWorkProjects = data.data.projects.slice(0, 3);
+
+
+        $scope.featuredWorkProjects = _.where(data.data.projects, {featured: true});
+
         $scope.featuredProjects = data.data.projects.slice(0, 6);
         //console.log($scope.featuredProjects);
+
+
+
+
 
     }, function(err){
         console.log(err);
