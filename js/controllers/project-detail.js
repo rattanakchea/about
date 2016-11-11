@@ -12,7 +12,6 @@ app.controller('ProjectDetailCtrl', function($scope, ProjectSvc, $routeParams, d
     } else {
 
         console.log('ProjectDetail Ctrl: look up project detail');
-
         $scope.currentProject = _.find(data.data.projects, function(project){
             return project.slug === slug || project.title === slug;
         });
