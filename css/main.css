@@ -4,15 +4,11 @@
  Author URI:   http://rattanakchea.github.io
 */
 /*@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");*/
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic|Open+Sans:400,700);
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400");
 /*----------- Color --------------- */
 /*black*/
 /*orange*/
 /*----------- Font --------------- */
-.grey {
-  color: grey;
-}
-
 /*@import 'partials/mixins';*/
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -26,7 +22,7 @@ p {
 }
 
 h4 {
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
 body #content {
@@ -61,8 +57,9 @@ a:hover {
 }
 
 body {
-  font: 1.6em "open sans", Helvetica, sans-serif;
+  font: 1.8em "Source Sans Pro", sans-serif;
   color: #000;
+  font-weight: 200;
 }
 
 .border {
@@ -98,7 +95,7 @@ body {
 
 .navbar-nav {
   /*	float: right;*/
-  font-size: 1.3em;
+  font-size: 1.4em;
 }
 
 #logo a span {
@@ -209,7 +206,7 @@ hr {
 .card-image .detail:hover {
   color: white;
   opacity: 1;
-  font-size: 1.3em;
+  font-size: 1.4em;
   color: #fcac45;
 }
 

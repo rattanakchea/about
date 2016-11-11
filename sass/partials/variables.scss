@@ -1,6 +1,8 @@
 /*@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");*/
 
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic|Open+Sans:400,700);
+//@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,700italic|Open+Sans:400,700);
+
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400");
 
 /*----------- Color --------------- */
 
@@ -19,12 +21,8 @@ $highlight_4: #a378fc;
 $border: #e6e7e9;
 
 /*----------- Font --------------- */
-$font-stack: "open sans",  Helvetica,  sans-serif;
+$font-stack: "Source Sans Pro", sans-serif;
 $xxlarge: 4em;
 $xlarge: 3em;
-$large: 1.3em;
-$regular: 1em;
-
-.grey {
-	color: grey;
-}
+$large: 1.4em;
+$regular: 1.2em;
