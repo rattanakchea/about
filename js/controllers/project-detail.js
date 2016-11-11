@@ -2,25 +2,20 @@
 
 var app = app || {};
 
-app.controller('ProjectDetailCtrl', function($scope, ProjectSvc, $routeParams) {
+app.controller('ProjectDetailCtrl', function($scope, ProjectSvc, $routeParams, data) {
 
     var slug = $routeParams.slug;
-
+    //console.log('route:', slug);
 
     if (ProjectSvc.currentWork) {
         $scope.currentProject = ProjectSvc.currentWork;
     } else {
-        ProjectSvc.retrieveProjectBySlug(slug).then(success, fail);
 
-        function success(data) {
-            $scope.currentProject = data;
-            console.log('success');
-        }
+        console.log('ProjectDetail Ctrl: look up project detail');
 
-        function fail(err) {
-            console.log(err)
-            $scope.currentProject = err.data;
-        }
+        $scope.currentProject = _.find(data.data.projects, function(project){
+            return project.slug === slug || project.title === slug;
+        });
     }
 
 

@@ -12,15 +12,14 @@ app.directive('myProject', function(ProjectSvc, $location) {
       }, 
       link: function(scope, element, attrs){
       	scope.setCurrentProject = function (project){
-      		console.log(project);
+            console.log('set current project');
       		ProjectSvc.currentWork = project;
       		var path = "/projects/" + ProjectSvc.buildSlug(project);
-      		$location.path(path);	
+      		$location.path(path);
       	},
 
-        //get project image
+        //get project image called in directive html file
         scope.getProjectImage = function(image) {
-          //console.log('here', image);
           return image || 'https://placehold.it/360x207?text=NotAvailable';
         };
       }

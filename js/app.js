@@ -18,15 +18,18 @@ app.config(function ($routeProvider) {
      controller: 'HomeCtrl'
   })
   .when('/projects/:slug', {
-    templateUrl: 'views/partials/_project-detail.html',
-     controller: 'ProjectDetailCtrl'
+      templateUrl: 'views/partials/_project-detail.html',
+      controller: 'ProjectDetailCtrl',
+      resolve: {
+        data: function(ProjectSvc){
+          return ProjectSvc.getProjects();
+        }
+      }
   })
-
   .when('/projects', {
     templateUrl: 'views/partials/_projects.html',
     controller: 'HomeCtrl'
   })
-
    .when('/resume', {
     templateUrl: 'views/partials/_resume.html',
     controller: 'HomeCtrl'

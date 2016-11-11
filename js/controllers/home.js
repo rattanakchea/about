@@ -2,13 +2,13 @@
 
 var app = app || {};
 
-app.controller('HomeCtrl', function($scope, ProjectSvc, CONFIG) {
+app.controller('HomeCtrl', function($scope, ProjectSvc) {
     
     $scope.projects = [];
 
     $scope.featuredProjects = [];
 
-    ProjectSvc.getProjects(CONFIG.PROJECT_URI).then(function(data){
+    ProjectSvc.getProjects().then(function(data){
         //console.log(data.data.projects);  //19 projects
         ProjectSvc.cachedProjects = data.data.projects;
         //console.log('cached: ', ProjectSvc.cachedProjects);
@@ -26,19 +26,9 @@ app.controller('HomeCtrl', function($scope, ProjectSvc, CONFIG) {
         //console.log($scope.featuredProjects);
 
 
-
-
-
     }, function(err){
         console.log(err);
-    })
-
-
-    //set current project into Project Svc to be used in project detail
-    $scope.setCurrentProject = function(project){
-        console.log('set current project');
-        ProjectSvc.currentProject = project;
-    }
+    });
 
 
     // projects page
@@ -71,10 +61,5 @@ app.controller('HomeCtrl', function($scope, ProjectSvc, CONFIG) {
     $scope.canGoBack = function(){
         return $scope.start > 0;
     };
-
-    $scope.getProjectImage = function(image) {
-        console.log('here', image);
-        return image || 'https://placehold.it/350x150';
-    }
 
 });
