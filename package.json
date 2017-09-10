@@ -1,0 +1,32 @@
+{
+  "name": "rattanakchea.github.io",
+  "version": "1.0.0",
+  "description": "My website for resume, portfolio, etc.",
+  "main": "index.js",
+  "scripts": {
+    "serve": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rattanakchea/rattanakchea.github.io.git"
+  },
+  "keywords": [
+    "rattanak",
+    "chea",
+    "software",
+    "portfolio",
+    "resume",
+    "code"
+  ],
+  "author": "Rattanak Chea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rattanakchea/rattanakchea.github.io/issues"
+  },
+  "homepage": "https://github.com/rattanakchea/rattanakchea.github.io#readme",
+  "devDependencies": {
+    "@types/jquery": "^3.2.12",
+    "lite-server": "^2.3.0"
+  }
+}
