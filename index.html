@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="some description about the app">
     <meta name="author" content="Rattanak Chea">
     <title>Rattanak Chea</title>
-    
+
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'>
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link href="css/main.css" rel="stylesheet">
     <link href="bower_components/deviceskin/device-skin.css" rel="stylesheet">
@@ -19,37 +21,39 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
         <![endif]-->
-    </head>
-    <body ng-app="appName">
+</head>
 
-        <!-- Navigation -->
-        <div ng-include="'views/partials/_navbar.html'"></div>
+<body ng-app="appName">
 
-        <!-- Page Content -->
-        <div id="content">
-            <div class="ng-view="></div>        
-        </div>
-        <!-- end content -->
+    <!-- Navigation -->
+    <div ng-include="'views/partials/_navbar.html'"></div>
 
-        <!-- Footer -->
-        <div ng-include="'views/partials/_footer.html'"></div>
+    <!-- Page Content -->
+    <div id="content">
+        <div class="ng-view="></div>
+    </div>
+    <!-- end content -->
 
-        <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-        <script src="js/libs/jquery.js"></script>
-        <script src="js/libs/bootstrap.min.js"></script>
-        <script src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script>
-        <script src="js/libs/angular.js"></script>
-        <script src="js/libs/angular-route.js"></script>
+    <!-- Footer -->
+    <div ng-include="'views/partials/_footer.html'"></div>
 
-        <script src="js/app.js"></script>
-        <script src="js/controllers/home.js"></script>
-        <script src="js/controllers/project-detail.js"></script>
-        <script src="js/controllers/blog.js"></script>
-        <script src="js/services/project-svc.js"></script>
-        <script src="js/directives/my-project.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="js/libs/jquery.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="https://cdn.rawgit.com/abdmob/x2js/master/xml2json.js"></script>
+    <script src="js/libs/angular.js"></script>
+    <script src="js/libs/angular-route.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/controllers/home.js"></script>
+    <script src="js/controllers/project-detail.js"></script>
+    <script src="js/controllers/blog.js"></script>
+    <script src="js/services/project-svc.js"></script>
+    <script src="js/directives/my-project.js"></script>
 
 
-        <script src="bower_components/deviceskin/device-skin.js"></script>
+    <script src="bower_components/deviceskin/device-skin.js"></script>
 
-    </body>
+</body>
+
 </html>
