@@ -1,21 +1,24 @@
 //import * as $ from "jquery";
-
-$(document).ready(function() {
+$(document).ready(function () {
   var $game = $('#game');
-  var matchGame = new MatchGame($game)
-  
-  matchGame.renderCards();
-  //$game.html('hello');
+  var matchGame;
+  startGame()
 
+  $('#restartGame').on('click', startGame);
 
-  // event listeners
-  $('.card').on('click', function() {
-    console.log('click', $(this));
-    console.log('data', $(this).data());
+  function startGame() {
+    $game.html('');
+    matchGame = new MatchGame($game)
+    matchGame.renderCards();
 
-    matchGame.flipCard($(this));
-  });
-  
+    // event listeners
+    $('.card').on('click', function () {
+      console.log('click', $(this));
+      console.log('data', $(this).data());
+      matchGame.flipCard($(this));
+    });
+  }
+
 });
 
 class Card {
@@ -44,6 +47,8 @@ class Card {
 class MatchGame {
   name: string;
   cards: Card[] = [];  // hold the all cards, and remaining
+
+  flippedCard: any = null;  //hold the single flippedCard
   $game: any;
 
   constructor($game) {
@@ -53,12 +58,15 @@ class MatchGame {
 
   // generate a collection of cards
   generateCards() {
-    for(var i=0; i < 4; i++) {
+    for (var i = 0; i < 8; i++) {
       let aCard = new Card(i);
       this.cards.push(aCard);
+      this.cards.push(aCard);
     }
-
     //shuffle the cards
+    this.cards.sort(() => {
+      return 0.5 - Math.random();
+    })
   }
 
   // render the cards to UI
@@ -72,18 +80,33 @@ class MatchGame {
   // @param, jquery card object with data attachement
   flipCard($card) {
 
+    // compare value of new flippedCard and flippedCard[0];
     var isFlipped = $card.data('isFlipped');
     var value = $card.data('value');
-    console.log($card.data());
 
-    //if already flipped, return
-   
-   
-    // reveal the card
-    $card.text(value).data('isFlipped', true);
-    console.log('after: ', $card.data());
+    if (isFlipped) return;
 
+    $card.text(value).data('isFlipped', true);  // reveal card value
+
+    if (!this.flippedCard) {
+      this.flippedCard = $card;
+      return;
+    }
+
+    if (value === this.flippedCard.data('value')) {  // found a match
+      this.flippedCard = null;
+    } else {
+      // hide the cards;
+      console.log('flippedCard :', this.flippedCard);
+      setTimeout(() => {
+        // TODO: separate UI and logic
+
+        this.flippedCard.text('').data('isFlipped', false);
+        $card.text('').data('isFlipped', false);
+        this.flippedCard = null;
+      }, 200);
+
+    }
+    //console.log($card.data());
   }
-
-
 }
