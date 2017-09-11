@@ -76,6 +76,8 @@ var MatchGame = (function () {
             return;
         }
         if (value === this.flippedCard.data('value')) {
+            this.flippedCard.css('background-color', 'rgb(153, 153, 153)');
+            $card.css('background-color', 'rgb(153, 153, 153)');
             this.flippedCard = null;
         }
         else {

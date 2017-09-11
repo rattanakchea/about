@@ -94,7 +94,10 @@ class MatchGame {
     }
 
     if (value === this.flippedCard.data('value')) {  // found a match
+      this.flippedCard.css('background-color', 'rgb(153, 153, 153)');
+      $card.css('background-color', 'rgb(153, 153, 153)');
       this.flippedCard = null;
+     
     } else {
       // hide the cards;
       console.log('flippedCard :', this.flippedCard);
